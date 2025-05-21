@@ -1,0 +1,543 @@
+/* ========================
+   FONTS E VARIÁVEIS GLOBAIS
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&family=Tektur:wght@400..900&display=swap');
+
+:root {
+    --primary-color: #948979;     /* Marrom Suave - cor principal */
+    --secondary-color: #393E46;   /* Cinza Médio - para elementos secundários */
+    --background-color: #222831;  /* Cinza Escuro - fundo geral */
+    --text-color: #DFD0B8;        /* Bege Claro - texto principal */
+    --section-bg: #393E46;        /* Cinza Médio - fundo de seções alternadas */
+    --card-bg: #393E46;           /* Cinza Médio - fundo dos cards */
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --accent-bg: #DFD0B8;         /* Bege Claro - pra elementos em destaque */
+    --accent-text: #222831;       /* Cinza Escuro - pra textos sobre o bege */
+}
+
+/* ========================
+   RESET & CONFIGURAÇÕES BÁSICAS
+=========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Blinker', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* ========================
+   HEADER / NAVBAR
+=========================== */
+
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--secondary-color);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.nav-content a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: all 0.3s;
+    position: relative;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+}
+
+.nav-content a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: all 0.3s;
+    transform: translateX(-50%);
+}
+
+.nav-content a:hover {
+    color: var(--primary-color);
+}
+
+.nav-content a:hover::after {
+    width: 100%;
+}
+
+/* ========================
+   HERO SECTION (Seção Inicial)
+=========================== */
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, var(--primary-color) 0%, transparent 70%);
+    opacity: 0.1;
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.hero-content {
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+    animation: fadeInUp 1s ease-out;
+}
+
+.profile-img {
+    width: 80vw; /* 80% da largura da tela */
+    height: 80vw; /* Altura igual à largura -> quadrado */
+    max-width: 300px; /* Limita em desktop */
+    max-height: 300px;
+    object-fit: cover; /* Mantém proporção e cobre o espaço */
+    border-radius: 5%;
+    margin-bottom: 2rem;
+    border: 4px solid var(--primary-color);
+    box-shadow: var(--card-shadow);
+    display: block; /* Evita pequenos espaços extras */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.tagline {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-style: italic;
+}
+
+/* ========================
+   SEÇÕES GERAIS
+=========================== */
+
+.section {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.section:nth-child(even) {
+    background-color: var(--section-bg);
+}
+
+.section h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--primary-color);
+    animation: width 2s ease-out;
+}
+
+@keyframes width {
+    from { width: 0; }
+    to { width: 60px; }
+}
+
+/* ========================
+   SOBRE MIM
+=========================== */
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-content ul {
+    list-style: none;
+}
+
+.about-content p {
+    font-size: 1.25rem; /* Aumentei o tamanho da fonte */
+    line-height: 1.8;   /* Melhora o espaçamento entre linhas */
+    text-align: justify; /* Texto justificado */
+    margin-bottom: 1.5rem;
+}
+
+/* 
+--- EXPERIENCE SECTION (DESATIVADA NO HTML) ---
+Usar esta parte quando ativar a seção de experiência no HTML 
+*/
+
+/*
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.experience-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s;
+    border: 1px solid transparent;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.experience-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.experience-card ul {
+    list-style: none;
+}
+
+.experience-card li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.experience-card li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+*/
+
+/* ========================
+   HABILIDADES
+=========================== */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.skill-category {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s;
+    border: 1px solid transparent;
+    font-size: 1.25rem;
+}
+
+.skill-category h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.skill-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-items span {
+    background: var(--card-bg);
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    border: 1px solid var(--primary-color);
+    transition: all 0.3s;
+}
+
+.skill-items span:hover {
+    background: var(--primary-color);
+    transform: translateY(-2px) scale(1.05);
+}
+
+/* ========================
+   CERTIFICAÇÕES
+=========================== */
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.cert-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    text-align: center;
+    border: 1px solid transparent;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-out;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.cert-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--primary-color) 50%,
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.cert-card:hover::before {
+    left: 100%;
+}
+
+.cert-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.cert-card i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    transition: transform 0.3s;
+}
+
+.cert-card:hover i {
+    transform: scale(1.2);
+}
+
+/* ========================
+   CONTATO
+=========================== */
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 1rem;
+    border-radius: 8px;
+    transition: all 0.3s;
+    background: var(--card-bg);
+    border: 1px solid transparent;
+}
+
+.contact-item:hover {
+    background: transparent;
+    border-color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.contact-item i {
+    font-size: 3rem;
+    transition: transform 0.3s;
+}
+
+.contact-item:hover i {
+    transform: scale(1.2);
+    color: var(--primary-color);
+}
+
+/* ========================
+   RODAPÉ
+=========================== */
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--secondary-color);
+    color: var(--text-color);
+    position: relative;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--primary-color),
+        transparent
+    );
+}
+
+/* ========================
+   HAMBURGER MENU (Mobile)
+=========================== */
+
+.hamburger {
+    display: none;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: var(--primary-color);
+    color: var(--accent-text);
+    border: none;
+    font-size: 1.5rem;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    z-index: 9998;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease;
+}
+
+.hamburger:hover {
+    background: #7c7361;
+}
+
+/* ========================
+   RESPONSIVO (Mobile)
+=========================== */
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-content {
+        flex-direction: column;
+        background: var(--secondary-color);
+        position: fixed;
+        top: 60px;
+        right: -100%;
+        width: 70%;
+        max-width: 300px;
+        height: 100vh;
+        padding: 2rem 1rem;
+        margin: 0;
+        transition: right 0.3s ease;
+        z-index: 9997;
+    }
+
+    .nav-content.active {
+        right: 0;
+    }
+
+    .nav-content a {
+        padding: 1rem;
+        width: 100%;
+        text-align: center;
+        font-size: 1.2rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-content a:hover::after {
+        width: 0;
+    }
+}
+
+/* ========================
+   MODAL DE CERTIFICADOS
+=========================== */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    margin: 5% auto;
+    display: block;
+    max-width: 70%;
+    border-radius: 8px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
