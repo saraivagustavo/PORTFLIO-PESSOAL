@@ -6,7 +6,7 @@ Este repositório contém o código-fonte do meu portfólio pessoal, desenvolvid
 
 Você pode acessar meu portfólio pelo GitHub Pages clicando no link abaixo:
 
-🔗 [https://saraivagustavo.github.io/nome-do-repositorio](https://saraivagustavo.github.io/Portfolio)
+🔗 [https://saraivagustavo.github.io/PORTFLIO-PESSOAL/](https://saraivagustavo.github.io/Portfolio)
 
 ## 📂 Seções do site
 
