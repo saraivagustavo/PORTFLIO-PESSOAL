@@ -163,3 +163,23 @@ const navContent = document.querySelector('.nav-content');
 hamburger.addEventListener('click', () => {
     navContent.classList.toggle('active');
 });
+
+//projects 
+// Animate project cards on scroll
+const projectObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+            projectObserver.unobserve(entry.target); // Opcional: para a animação não repetir
+        }
+    });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.project-card').forEach((card, index) => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(40px)';
+    card.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+    card.style.transitionDelay = `${index * 0.1}s`;
+    projectObserver.observe(card);
+});

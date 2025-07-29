@@ -167,10 +167,6 @@ body {
     position: relative;
 }
 
-.section:nth-child(even) {
-    background-color: var(--section-bg);
-}
-
 .section h2 {
     text-align: center;
     color: var(--primary-color);
@@ -216,56 +212,6 @@ body {
     text-align: justify; /* Texto justificado */
     margin-bottom: 1.5rem;
 }
-
-/* 
---- EXPERIENCE SECTION (DESATIVADA NO HTML) ---
-Usar esta parte quando ativar a seção de experiência no HTML 
-*/
-
-/*
-.experience-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.experience-card {
-    background: var(--card-bg);
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: var(--card-shadow);
-    transition: all 0.3s;
-    border: 1px solid transparent;
-}
-
-.experience-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--primary-color);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-}
-
-.experience-card h3 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-.experience-card ul {
-    list-style: none;
-}
-
-.experience-card li {
-    margin-bottom: 0.5rem;
-    position: relative;
-    padding-left: 1.5rem;
-}
-
-.experience-card li::before {
-    content: '▹';
-    position: absolute;
-    left: 0;
-    color: var(--primary-color);
-}
-*/
 
 /* ========================
    HABILIDADES
@@ -540,4 +486,102 @@ footer::before {
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;
+}
+
+/* ========================
+   SEÇÃO DE PROJETOS
+=========================== */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease-out;
+    border: 1px solid transparent;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    border-color: var(--primary-color);
+}
+
+.project-img {
+    width: 100%;
+    height: auto; /* Altura fixa para manter proporção */
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.project-card:hover .project-img {
+    transform: scale(1.02);
+}
+
+.project-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Faz o conteúdo ocupar o espaço restante */
+}
+
+.project-title {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.project-description {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-tags span {
+    background: var(--background-color);
+    color: var(--text-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    border: 1px solid var(--primary-color);
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: auto; /* Alinha os links na parte inferior */
+}
+
+.project-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s;
+}
+
+.project-link:hover {
+    color: var(--primary-color);
+}
+
+.project-link i {
+    font-size: 1.2rem;
 }
