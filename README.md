@@ -6,7 +6,7 @@ Este repositório contém o código-fonte do meu portfólio pessoal, desenvolvid
 
 Você pode acessar meu portfólio pelo Vercel clicando no link abaixo:
 
-🔗 [Link](https://portfolio-gustavo-saraiva.vercel.app/)
+🔗 [Clique aqui](https://portfolio-gustavo-saraiva.vercel.app/)
 
 ## 📂 Seções do site
 
@@ -28,5 +28,6 @@ O portfólio está dividido nas seguintes seções:
 ## 📄 Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
 
 
