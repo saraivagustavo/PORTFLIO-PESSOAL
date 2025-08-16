@@ -4,9 +4,9 @@ Este repositório contém o código-fonte do meu portfólio pessoal, desenvolvid
 
 ## 🌐 Acesse online
 
-Você pode acessar meu portfólio pelo GitHub Pages clicando no link abaixo:
+Você pode acessar meu portfólio pelo Vercel clicando no link abaixo:
 
-🔗 [https://saraivagustavo.github.io/nome-do-repositorio](https://saraivagustavo.github.io/Portfolio)
+🔗 [Link](https://portfolio-gustavo-saraiva.vercel.app/)
 
 ## 📂 Seções do site
 
@@ -28,4 +28,5 @@ O portfólio está dividido nas seguintes seções:
 ## 📄 Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
 
