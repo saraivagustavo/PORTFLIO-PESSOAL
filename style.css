@@ -495,7 +495,7 @@ footer::before {
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
+    gap: 1.8rem;
 }
 
 .project-card {
@@ -517,7 +517,7 @@ footer::before {
 
 .project-img {
     width: 100%;
-    height: auto; /* Altura fixa para manter proporção */
+    height: auto;
     object-fit: cover;
     transition: transform 0.3s;
 }
@@ -527,7 +527,7 @@ footer::before {
 }
 
 .project-content {
-    padding: 1.5rem;
+    padding: 1.2rem;
     display: flex;
     flex-direction: column;
     flex-grow: 1; /* Faz o conteúdo ocupar o espaço restante */
@@ -536,7 +536,7 @@ footer::before {
 .project-title {
     color: var(--primary-color);
     margin-bottom: 0.5rem;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 .project-description {
@@ -550,7 +550,7 @@ footer::before {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
 }
 
 .project-tags span {
@@ -558,7 +558,7 @@ footer::before {
     color: var(--text-color);
     padding: 0.3rem 0.8rem;
     border-radius: 15px;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     border: 1px solid var(--primary-color);
 }
 
@@ -583,5 +583,5 @@ footer::before {
 }
 
 .project-link i {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
