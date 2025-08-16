@@ -14,6 +14,7 @@ O portfólio está dividido nas seguintes seções:
 
 - **Início**: Apresentação inicial com uma mensagem de boas-vindas.
 - **Sobre**: Breve descrição sobre quem sou, minha trajetória e meus objetivos.
+- **Projetos**: Demonstração de projetos que crio para aprofundar meus conhecimentos.
 - **Habilidades**: Lista das principais tecnologias e ferramentas com as quais tenho experiência.
 - **Certificações**: Cursos e certificações que obtive ao longo da minha formação.
 - **Contato**: Formas de entrar em contato comigo.
@@ -27,3 +28,4 @@ O portfólio está dividido nas seguintes seções:
 ## 📄 Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
